@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: redis
+    image: 10.26.31.146/easou.io/redis:v1.0.0
     commands:
       - redis-cli -h redis ping
       - redis-cli -h redis set FOO bar
@@ -8,4 +8,4 @@ pipeline:
 
 services:
   redis:
-    image: redis
+    image: 10.26.31.146/easou.io/redis:v1.0.0

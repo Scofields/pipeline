@@ -1,0 +1,11 @@
+pipeline:
+  build:
+    image: redis
+    commands:
+      - redis-cli -h redis ping
+      - redis-cli -h redis set FOO bar
+      - redis-cli -h redis get FOO
+
+services:
+  redis:
+    image: redis
